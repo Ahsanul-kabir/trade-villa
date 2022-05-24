@@ -14,7 +14,7 @@ const Header = () => {
     }
     return (
         <header>
-            <Navbar className="poppins-font fixed-top" bg="dark" variant="dark" expand="lg" >
+            <Navbar className="poppins-font fixed-top p-3" bg="dark" variant="dark" expand="lg" >
                 <Container>
                     <Navbar.Brand href="#home">
                         <img className="header-menu" src={''} alt="" />
