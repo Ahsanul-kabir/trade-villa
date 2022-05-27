@@ -7,18 +7,23 @@ const MyOrders = () => {
 
     const [user] = useAuthState(auth);
     const [myOrders, setMyOrders] = useState([]);
-    useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${user?.email}`, {
-            method: 'GET',
-            headers: {
-                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
 
-            .then(res => res.json())
-            .then(data => setMyOrders(data))
+    useEffect(() => {
+        if (user) {
+            fetch(`http://localhost:5000/myOrders/${user?.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+
+                .then(res => res.json())
+                .then(data => setMyOrders(data))
+        }
+
     }, [user?.email])
 
+    console.log(myOrders)
 
     return (
         <section style={{ overflow: 'scroll' }}>

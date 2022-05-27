@@ -1,8 +1,14 @@
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import useAdmin from '../../../hooks/useAdmin';
 import './Sidebar.css'
 
 
 const Sidebar = () => {
+    const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
+
     return (
         <div className="pt-5 sidebar d-flex flex-column justify-content-between col-md-12 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
@@ -11,6 +17,15 @@ const Sidebar = () => {
                         <i className="fas fa-shopping-cart"></i><span> My Order</span>
                     </Link>
                 </li>
+
+                {
+                    admin &&
+                    <li>
+                        <Link to="/dashboard/users" className="text-dark">
+                            <i className="fas fa-user-shield"></i><span> All Users</span>
+                        </Link>
+                    </li>
+                }
 
                 <li>
                     <Link to="/dashboard/addProduct" className="text-dark">
