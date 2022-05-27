@@ -67,9 +67,9 @@ const BuyNow = () => {
                             </Card.Body>
 
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                <input className="form-control" disabled {...register("name", { required: true })} value={user?.displayName} /> <br />
-                                <input className="form-control" disabled {...register("email")} value={user?.email} /> <br />
-                                <input className="form-control" disabled {...register("pdName")} value={product?.name} /> <br />
+                                <input className="form-control" {...register("name", { required: true })} value={user?.displayName} /> <br />
+                                <input className="form-control" {...register("email")} value={user?.email} /> <br />
+                                <input className="form-control" {...register("pdName")} value={product?.name} /> <br />
                                 <input className="form-control" type="number" {...register("minOrder")} placeholder="Order amount" /> <br />
                                 <input className="form-control" {...register("address")} placeholder="Your address" /> <br />
                                 <input className="form-control" type="number" {...register("phone")} placeholder="Your phone" /> <br />
