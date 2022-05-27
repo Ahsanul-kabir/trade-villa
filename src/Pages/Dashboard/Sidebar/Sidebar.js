@@ -11,6 +11,12 @@ const Sidebar = () => {
                         <i className="fas fa-shopping-cart"></i><span> My Order</span>
                     </Link>
                 </li>
+
+                <li>
+                    <Link to="/dashboard/addProduct" className="text-dark">
+                        <i className="far fa-share-square"></i><span> Add Product</span>
+                    </Link>
+                </li>
             </ul>
         </div>
     );
