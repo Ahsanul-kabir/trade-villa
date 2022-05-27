@@ -12,26 +12,30 @@ const Sidebar = () => {
     return (
         <div className="pt-5 sidebar d-flex flex-column justify-content-between col-md-12 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
-                <li>
-                    <Link to="/dashboard/myOrders" className="text-dark">
-                        <i className="fas fa-shopping-cart"></i><span> My Order</span>
-                    </Link>
-                </li>
-
-                {
-                    admin &&
+                {!admin &&
                     <li>
-                        <Link to="/dashboard/users" className="text-dark">
-                            <i className="fas fa-user-shield"></i><span> All Users</span>
+                        <Link to="/dashboard/myOrders" className="text-dark">
+                            <i className="fas fa-shopping-cart"></i><span> My Order</span>
                         </Link>
                     </li>
                 }
 
-                <li>
-                    <Link to="/dashboard/addProduct" className="text-dark">
-                        <i className="far fa-share-square"></i><span> Add Product</span>
-                    </Link>
-                </li>
+
+                {
+                    admin && <>
+                        <li>
+                            <Link to="/dashboard/users" className="text-dark">
+                                <i className="fas fa-user-shield"></i><span> Make Admin</span>
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link to="/dashboard/addProduct" className="text-dark">
+                                <i className="far fa-share-square"></i><span> Add Product</span>
+                            </Link>
+                        </li>
+                    </>
+                }
             </ul>
         </div>
     );
