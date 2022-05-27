@@ -4,6 +4,7 @@ import BuyNow from './Pages/BuyNow/BuyNow';
 import AddNewProduct from './Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
+import Review from './Pages/Dashboard/Review/Review';
 import Users from './Pages/Dashboard/Users/Users';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
@@ -30,6 +31,7 @@ function App() {
         <Route path="/dashboard" element={<RequireAuth> <Dashboard /></RequireAuth>} >
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
+          <Route path="review" element={<Review></Review>}></Route>
           <Route path="addProduct" element={<AddNewProduct></AddNewProduct>}></Route>
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
