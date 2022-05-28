@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/myOrders/${user?.email}`, {
+            fetch(`https://whispering-sands-24235.herokuapp.com/myOrders/${user?.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -35,7 +35,7 @@ const MyOrders = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result) {
-                axios.delete(`http://localhost:5000/delete/${id}`)
+                axios.delete(`https://whispering-sands-24235.herokuapp.com/delete/${id}`)
                     .then(result => {
                         if (result.data.deletedCount > 0) {
                             const remain = myOrders.filter(order => order._id !== id);

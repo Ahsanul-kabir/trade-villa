@@ -15,7 +15,7 @@ const BuyNow = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://whispering-sands-24235.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, []);
@@ -26,7 +26,7 @@ const BuyNow = () => {
 
         if (product.minOrder < minimumOrd && product.availableItems >= minimumOrd) {
             data.status = 'Pending';
-            axios.post('http://localhost:5000/addOrder', data)
+            axios.post('https://whispering-sands-24235.herokuapp.com/addOrder', data)
                 .then(result => {
                     if (result.data.insertedId) {
                         Swal.fire(

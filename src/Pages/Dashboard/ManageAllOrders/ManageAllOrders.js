@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allOrders`)
+        fetch(`https://whispering-sands-24235.herokuapp.com/allOrders`)
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [allOrders]);
@@ -23,7 +23,7 @@ const ManageAllOrders = () => {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
-            axios.delete(`http://localhost:5000/delete/${id}`)
+            axios.delete(`https://whispering-sands-24235.herokuapp.com/delete/${id}`)
                 .then(result => {
                     if (result.data.deletedCount) {
 
@@ -45,7 +45,7 @@ const ManageAllOrders = () => {
 
     const statusUpdate = id => {
         const status = 'Shipped';
-        fetch(`http://localhost:5000/statusUpdate/${id}`, {
+        fetch(`https://whispering-sands-24235.herokuapp.com/statusUpdate/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ status }),
