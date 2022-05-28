@@ -1,7 +1,7 @@
 # Trade Villa
 
-Live Site [Click Here](https://trade-villa.web.app/).
-Server Site Repo [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Ahsanul-kabir).
+- Live Site [Click Here](https://trade-villa.web.app/).
+- Server Site Repo [Click Here](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Ahsanul-kabir).
 
 # Default Admin
 
