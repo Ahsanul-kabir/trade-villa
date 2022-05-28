@@ -4,6 +4,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import BuyNow from './Pages/BuyNow/BuyNow';
 import AddNewProduct from './Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import ManageAllOrders from './Pages/Dashboard/ManageAllOrders/ManageAllOrders';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import Review from './Pages/Dashboard/Review/Review';
 import Users from './Pages/Dashboard/Users/Users';
@@ -37,6 +38,7 @@ function App() {
           <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
           <Route path="addProduct" element={<AddNewProduct></AddNewProduct>}></Route>
+          <Route path="manageAllOrders" element={<ManageAllOrders></ManageAllOrders>}></Route>
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path="*" element={<NotFound />} />
