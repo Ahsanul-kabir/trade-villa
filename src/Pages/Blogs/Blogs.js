@@ -81,6 +81,17 @@ const Blogs = () => {
                                 <span className='fs-5 '>Unit Test-</span>
                                 A unit test is a way of testing a unit - the smallest piece of code that can be logically isolated in a system. In most programming languages, that is a function, a subroutine, a method or property. The isolated part of the definition is important.
                             </p>
+
+                            <p>
+                                <span className='fs-5 '>Why should write unit tests-</span>
+                                <ol type='I'>
+                                    <li>Any bugs are found easily and quicker</li>
+                                    <li>Unit testing saves time and money</li>
+                                    <li>Unit testing provides documentation</li>
+                                    <li>Unit testing improves code coverage </li>
+                                    <li>Unit testing reduces code complexity</li>
+                                </ol>
+                            </p>
                         </div>
                     </div>
                 </div>
