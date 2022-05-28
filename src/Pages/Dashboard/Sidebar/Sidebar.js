@@ -10,7 +10,7 @@ const Sidebar = () => {
     const [admin] = useAdmin(user);
 
     return (
-        <div className="pt-5 sidebar d-flex flex-column justify-content-between col-md-12 py-5 px-4" style={{ height: "100vh" }}>
+        <div className="pt-5 sidebar d-flex flex-column justify-content-between col-md-12 py-5 px-4">
             <ul className="list-unstyled">
                 {!admin && <>
                     <li>

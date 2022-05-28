@@ -4,6 +4,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import BuyNow from './Pages/BuyNow/BuyNow';
 import AddNewProduct from './Pages/Dashboard/AddNewProduct/AddNewProduct';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import HomeDashboard from './Pages/Dashboard/HomeDashboard/HomeDashboard';
 import ManageAllOrders from './Pages/Dashboard/ManageAllOrders/ManageAllOrders';
 import ManageProducts from './Pages/Dashboard/ManageProducts/ManageProducts';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
@@ -35,7 +36,7 @@ function App() {
           </RequireAuth>
         } />
         <Route path="/dashboard" element={<RequireAuth> <Dashboard /></RequireAuth>} >
-          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route index element={<HomeDashboard></HomeDashboard>}></Route>
           <Route path="myOrders" element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
           <Route path="addProduct" element={<AddNewProduct></AddNewProduct>}></Route>
