@@ -48,6 +48,12 @@ const Sidebar = () => {
                                 <i className="fas fa-tasks"></i><span> Manage Orders</span>
                             </Link>
                         </li>
+
+                        <li>
+                            <Link to="/dashboard/manageProducts" className="text-dark">
+                                <i className="fas fa-align-justify"></i><span> Manage Products</span>
+                            </Link>
+                        </li>
                     </>
                 }
             </ul>
