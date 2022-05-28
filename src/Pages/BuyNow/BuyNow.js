@@ -24,7 +24,7 @@ const BuyNow = () => {
     const onSubmit = data => {
         const minimumOrd = parseInt(data.minOrder)
 
-        if (product.minOrder < minimumOrd && product.availableItems >= minimumOrd) {
+        if (product.minOrder <= minimumOrd && product.availableItems >= minimumOrd) {
             data.status = 'Pending';
             axios.post('https://whispering-sands-24235.herokuapp.com/addOrder', data)
                 .then(result => {
