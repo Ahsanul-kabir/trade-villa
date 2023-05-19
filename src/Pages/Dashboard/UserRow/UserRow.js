@@ -5,7 +5,7 @@ const UserRow = ({ user, refetch }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`https://whispering-sands-24235.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://trade-villa-server.onrender.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

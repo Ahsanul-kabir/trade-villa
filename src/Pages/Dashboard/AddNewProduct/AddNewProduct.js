@@ -7,7 +7,7 @@ const Swal = require('sweetalert2')
 const AddNewProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('https://whispering-sands-24235.herokuapp.com/addProduct', data)
+        axios.post('https://trade-villa-server.onrender.com/addProduct', data)
             .then(result => {
                 if (result.data.insertedId) {
                     Swal.fire(

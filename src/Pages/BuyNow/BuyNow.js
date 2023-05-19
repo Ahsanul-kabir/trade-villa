@@ -15,7 +15,7 @@ const BuyNow = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`https://whispering-sands-24235.herokuapp.com/products/${productId}`)
+        fetch(`https://trade-villa-server.onrender.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, []);
@@ -26,7 +26,7 @@ const BuyNow = () => {
 
         if (product.minOrder <= minimumOrd && product.availableItems >= minimumOrd) {
             data.status = 'Pending';
-            axios.post('https://whispering-sands-24235.herokuapp.com/addOrder', data)
+            axios.post('https://trade-villa-server.onrender.com/addOrder', data)
                 .then(result => {
                     if (result.data.insertedId) {
                         Swal.fire(

@@ -6,7 +6,7 @@ const Swal = require('sweetalert2')
 const ManageProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
     useEffect(() => {
-        fetch(`https://whispering-sands-24235.herokuapp.com/products`)
+        fetch(`https://trade-villa-server.onrender.com/products`)
             .then(res => res.json())
             .then(data => setAllProducts(data))
     }, [])
@@ -22,7 +22,7 @@ const ManageProducts = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result) {
-                axios.delete(`https://whispering-sands-24235.herokuapp.com/products/${id}`)
+                axios.delete(`https://trade-villa-server.onrender.com/products/${id}`)
                     .then(result => {
                         if (result.data.deletedCount) {
 

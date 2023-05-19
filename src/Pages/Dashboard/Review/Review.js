@@ -14,7 +14,7 @@ const Review = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         data.rating = rating;
-        axios.post('https://whispering-sands-24235.herokuapp.com/review', data)
+        axios.post('https://trade-villa-server.onrender.com/review', data)
             .then(result => {
                 if (result.data.insertedId) {
                     Swal.fire(
